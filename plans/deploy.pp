@@ -88,12 +88,17 @@ plan kubecm::deploy (
       $chart_source_real = file::join('.', $chart_source)
     }
 
+    if $render_to {
+      $kube_version_data = run_command('kubectl version -o yaml', 'localhost', 'Get kubernetes version').first.value['stdout'].parseyaml
+      $kube_version = "${kube_version_data['serverVersion']['major']}.${kube_version_data['serverVersion']['minor']}"
+    }
+
     $helm_cmd = [
       'helm',
 
       $render_to ? {
         undef   => ['upgrade', '--install'],
-        default => 'template',
+        default => ['template', '--kube-version', $kube_version],
       },
 
       $release, $chart_source_real,
