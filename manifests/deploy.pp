@@ -94,7 +94,7 @@ class kubecm::deploy (
 
     file {
       "${release_build_dir}/chart":
-        ensure  => directory;
+        ensure => directory;
 
       "${release_build_dir}/chart/Chart.yaml":
         content => {
