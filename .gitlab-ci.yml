@@ -6,13 +6,13 @@ stages:
   - 'Test'
 
 'Validate':
-  image: '${CI_REGISTRY}/nest/tools/pdk:${CI_HOST_CPU}'
+  image: '${CI_REGISTRY}/nest/tools/pdk'
   stage: 'Test'
   script:
     - 'pdk validate'
 
 'Unit Test':
-  image: '${CI_REGISTRY}/nest/tools/pdk:${CI_HOST_CPU}'
+  image: '${CI_REGISTRY}/nest/tools/pdk'
   stage: 'Test'
   script:
     - 'pdk test unit --parallel --verbose'
