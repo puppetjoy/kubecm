@@ -105,8 +105,15 @@ describe 'kubecm::deploy' do
   end
 
   it 'renders a chart to a specified file' do
+    version_yaml = <<~YAML.chomp
+      serverVersion:
+        major: "1"
+        minor: "99"
+    YAML
+    expect_command('kubectl version -o yaml').always_return({ stdout: version_yaml })
     expect_command <<~CMD.chomp
-      helm template test /fakedir/build/test/chart \
+      helm template --kube-version 1.99 \
+      test /fakedir/build/test/chart \
       --post-renderer /fakedir/build/test/kustomize.sh \
       --post-renderer-args /fakedir/build/test \
       --values /fakedir/build/test/values.yaml > test.yaml
