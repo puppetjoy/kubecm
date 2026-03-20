@@ -1,6 +1,6 @@
 # KubeCM: Kubernetes Configuration Management
 
-[![pipeline status](https://gitlab.james.tl/james/kubecm/badges/main/pipeline.svg)](https://gitlab.james.tl/james/kubecm/-/commits/main)
+[![pipeline status](https://gitlab.joyfullee.me/joy/kubecm/badges/main/pipeline.svg)](https://gitlab.joyfullee.me/joy/kubecm/-/commits/main)
 
 - [Overview](#overview)
 - [Features](#features)
@@ -77,7 +77,7 @@ Ensure the following tools are installed and configured on a Linux system:
 2. **Install the module**:
 
    ```bash
-   bolt module add jtl-kubecm
+   bolt module add joy-kubecm
    ```
 
 ### Usage

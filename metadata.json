@@ -1,12 +1,12 @@
 {
-  "name": "jtl-kubecm",
-  "version": "0.1.1",
-  "author": "James Lee",
+  "name": "joy-kubecm",
+  "version": "0.2.0",
+  "author": "Joyful Lee",
   "summary": "Control Kubernetes with Puppet",
   "license": "Apache-2.0",
-  "source": "https://github.com/jameslikeslinux/kubecm.git",
-  "project_page": "https://github.com/jameslikeslinux/kubecm",
-  "issues_url": "https://github.com/jameslikeslinux/kubecm/issues",
+  "source": "https://github.com/puppetjoy/kubecm.git",
+  "project_page": "https://github.com/puppetjoy/kubecm",
+  "issues_url": "https://github.com/puppetjoy/kubecm/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
